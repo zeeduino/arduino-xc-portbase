@@ -90,7 +90,7 @@ typedef struct _DigitalMappingType
     uint32_t reserved:16;
 } DigitalMappingType;
 
-typedef struct _LPCPinDescription
+typedef struct _ArduinoPinDescriptionType
 {
     uint32_t port:8;
     uint32_t pin:8;
@@ -98,13 +98,13 @@ typedef struct _LPCPinDescription
     AnalogChannelType adcChannel; // Analog input in Arduino context: (0-5, 0-7 Mini & Nano, 0-15 Mega)
     PwmChannelType pwmChannel; // Which LPC PWM channel (if any) is configured on this pin
     ExtInterruptType intPin; // to which pin interrupt channel is this pin assigned (attachInterrupt/detachInterrupt)
-} LPCPinDescription;
+} ArduinoPinDescriptionType;
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-extern const LPCPinDescription g_ArduinoPinDescription[];
+extern const ArduinoPinDescriptionType g_ArduinoPinDescription[];
 extern const PwmMappingType g_ArduinoPinMappingPwm[];
 extern const DigitalMappingType g_ArduinoPinMappingDigital[];
 extern const uint32_t arduinoPinsArrayLength;

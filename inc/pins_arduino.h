@@ -96,8 +96,8 @@ typedef struct _ArduinoPinDescriptionType
     uint32_t pin:8;
     uint32_t modefunc:16; // IOCON register value used to initialize pins at startup
     AnalogChannelType adcChannel; // Analog input in Arduino context: (0-5, 0-7 Mini & Nano, 0-15 Mega)
-    PwmChannelType pwmChannel; // Which LPC PWM channel (if any) is configured on this pin
-    ExtInterruptType intPin; // to which pin interrupt channel is this pin assigned (attachInterrupt/detachInterrupt)
+    PwmChannelType pwmChannel; // PWM channel (if any) in Arduino context
+    ExtInterruptType intChannel; // the interrupt channel (if any) to which this Arduino pin is assigned to (attachInterrupt/detachInterrupt)
 } ArduinoPinDescriptionType;
 
 #ifdef __cplusplus
@@ -115,7 +115,7 @@ extern const uint32_t arduinoPinsArrayLength;
 #define APIN_MODE(p)  (g_ArduinoPinDescription[p].modefunc)
 #define APIN_ADC(p)   (g_ArduinoPinDescription[p].adcChannel)
 #define APIN_PWM(p)   (g_ArduinoPinDescription[p].pwmChannel)
-#define APIN_INT(p)   (g_ArduinoPinDescription[p].intPin)
+#define APIN_INT(p)   (g_ArduinoPinDescription[p].intChannel)
 
 #define PWM_MAP_TIMER(p)    (g_ArduinoPinMappingPwm[p].pTMR)
 #define PWM_MAP_CHANNEL(p)  (g_ArduinoPinMappingPwm[p].channel)

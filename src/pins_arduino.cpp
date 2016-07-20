@@ -164,6 +164,8 @@ void Variant_Pins_Init()
 
     for (ix = 0; ix < arduinoPinsArrayLength; ix++ )
     {
+        if(g_ArduinoPinDescription[ix].port == 99) continue;
+
         Chip_IOCON_PinMuxSet(LPC_IOCON, g_ArduinoPinDescription[ix].port, g_ArduinoPinDescription[ix].pin, g_ArduinoPinDescription[ix].modefunc);
     }
 

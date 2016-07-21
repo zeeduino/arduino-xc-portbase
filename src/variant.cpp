@@ -49,16 +49,16 @@ void yield(void)
 
 void initVariant( void )
 {
-	Board_Init();
-    Board_Delay_InitTimer();
-    Serial_Init();
-
     /*
         Call any chip/board specific initializations for IRQs and similar critical stuff here
         or implement them in board_private.c as private functions and call those from here.
         Example for LPC system tick IRQ handler
     */
     // SysTick_Config(SystemCoreClock / 1000);
+
+    Board_Init();
+    Board_Delay_InitTimer();
+    Serial_Init();
 
     /*
         Call any chip/board specific private initialization functions from board_private.c here.

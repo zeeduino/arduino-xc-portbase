@@ -17,11 +17,10 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#include "chip.h"
-#include "pinint_13xx.h"
-
 #include "pins_arduino.h"
 #include "wiring_constants.h"
+
+// #include ....
 
 #ifdef __cplusplus
 extern "C" {

@@ -20,10 +20,9 @@
 #include "chip.h"
 #include "pins_arduino.h"
 
-#include "timer_13xx.h"
-#include "gpio_13xx_1.h"
-
 #include "pins_arduino.h"
+
+// #include ....
 
 #ifdef __cplusplus
 extern "C" {

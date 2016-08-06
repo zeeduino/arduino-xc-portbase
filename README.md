@@ -1,1 +1,1 @@
-## arduino-xc-portbase - starting point for Arduino-XC Hardware Abstraction Layer implementation
+## zeeduino-xc-hal - starting point for Zeeduino-XC Hardware Abstraction Layer implementation
